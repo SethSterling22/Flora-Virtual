@@ -211,3 +211,5 @@ __marimo__/
 /flora-admin_v1.2.tar
 /Fotos/
 
+# Ignorar todos los archivos de imagen
+*.[jpg,jpeg,png,gif,svg,webp]
