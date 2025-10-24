@@ -23,3 +23,13 @@
 /app/Config/core.php
 /app/Config/database.php
 /vendors/*
+
+
+backup/
+flora-admin_v1.2.tar
+Fotos/
+
+# Ignorar todos los archivos de imagen
+*.[jpg,jpeg,png,gif,svg,webp]
+
+
