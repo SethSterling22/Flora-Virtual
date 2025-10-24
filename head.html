@@ -1,0 +1,43 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/elverde/assets/images/homepage/Icono_Flora.png" type="image/x-icon">
+<!-- Line Awesome CDN Link -->
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+  integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/elverde/assets/stylesheets/nav_styles.css"> 
+</head>
+
+<body> 
+<section class="nav">
+  <a href="/" class="logo">
+      <img src="/elverde/assets/images/homepage/logo-flora-virtual new-2024.png" alt="Site's logo">
+  </a>
+  <nav>
+      <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+      <ul class="nav-list">
+          <li><a href="index.php" class=unselected>Inicio</a></li>
+          <li><a href="familias.php" class=unselected>Familias</a></li>
+          <li><a href="especies.php" class=unselected>Especies</a></li>
+          <li><a href="especimen.php" class=unselected>Especímenes</a></li>
+          <li class="dropdown" onclick="toggleDropdown()">
+              <a href="#" class=unselected>Recursos ▼</a>
+              <div class="dropdown-content">
+                  <a href="claves.php">Claves</a>
+                  <a href="glosario.php">Glosario</a>
+                  <a href="literatura.php">Literatura</a>
+              </div>
+          </li>
+          <li><a href="galeria.php" class=unselected>Galería</a></li>
+          <li><a href="nosotros.php" class=unselected>Nosotros</a></li>
+      </ul>
+  </nav>
+</section>
+<script src="script.js"></script>
+</body>

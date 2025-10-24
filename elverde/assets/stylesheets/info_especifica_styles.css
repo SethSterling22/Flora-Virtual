@@ -1,0 +1,293 @@
+  /* .body{
+    background-image: url("/elverde/assets/images/homepage/Patron_fondo.png");
+    background-repeat: repeat-both;
+  } */
+
+  .history-hero {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 170px;
+    background-image: linear-gradient(to bottom, #45784b, #47974f);
+    color: #ffffff;
+    
+  }
+  
+  .caption-container {
+    display: inline-block;
+    margin-left: 10%;
+  }
+  
+  h3.caption-title {
+    font-size: 30px;
+    color: white;
+    text-align: left;
+    text-shadow: 0px 2px 2px rgba(150, 150, 150, .5);
+    animation-name: headerenter;
+    animation-duration: 5s;
+    text-decoration: none;
+  }
+  
+  h3.caption-title a {
+    font-size: 30px;
+    color: white;
+    text-align: left;
+    text-shadow: 0px 2px 2px rgba(150, 150, 150, .5);
+    animation-name: headerenter;
+    animation-duration: 5s;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+  }
+  
+  h3.caption-title a:hover {
+    text-decoration: underline;
+  }
+  
+
+  .CentradoRectangulo {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* Agregar esta línea para la sombra del borde */
+    margin: 20px 0;
+}
+
+  /* CARD */
+  .info-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    max-width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+
+
+  .card-text {
+    margin-bottom: 10px;
+  }
+  
+  .card-link {
+    text-decoration: none;
+    color: #4FA858;
+  }
+
+ .card-link {
+    color: inherit;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-link::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: inherit;
+    width: 0;
+    transition: width 0.3s ease 0s;
+  }
+  
+  .card-link:hover {
+    transform: scale(1.05);
+    color: #FCAB5B;
+  }
+  
+  .card-link:hover::after {
+    width: 100%;
+  }
+  
+  .card-link:hover {
+    transform: scale(1.1);
+    color: #FCAB5B;
+  }
+
+
+
+
+
+
+  .image-column-info {
+    flex: 1;
+    /* Take up 1/2 of the container */
+    padding: 10px;
+  }
+
+  .image-column-info img {
+    width: 80%;
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05); /* Fondo negro con opacidad del 30% */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  
+
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image {
+    display: block;
+  }
+  
+  .magnifier {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-image: url('../images/symbols/lupa.png'); /* Ruta de la imagen de la lupa */
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+
+  .image-container:hover .magnifier {
+    opacity: 1;
+  }
+
+  .image-loading {
+    /* display: none; */
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+  .text-column-info {
+    flex: 1;
+    /* Take up 1/2 of the container */
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #7b7b7b;
+  }
+
+  .text-column-info h2 {
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 25px;
+    color: #45784b;
+  }
+
+  /* Media query for screens 600px and below */
+  @media (max-width: 600px) {
+    .info-card-container {
+      flex-direction: column;
+      /* Change to a single column layout */
+    }
+
+    .text-column {
+      order: -1;
+    }
+
+    .image-column img {
+      max-width: 100%;
+      max-height: 100%;
+
+    }
+  }
+
+  /* <!-- carousel --> */
+
+  .carousel-container {
+    position: relative;
+    width: 85%; /* Ajusta el ancho según tus necesidades */
+    max-width: 90vw; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 30px auto;
+    margin-bottom: 100px; /* Agrega un espacio hacia abajo de 100px */
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin-top: 60px; /* Espacio entre las flechas e imágenes */
+    padding-right: 20px; /* Espacio adicional entre las flechas e imágenes */
+  }
+
+    
+.title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin-bottom: 35px;
+  font-weight: 700px;
+  font-size: 25px;
+  color: #45784b;
+}
+    .carousel img {
+      width: 300px;
+      height: 300px;
+      margin-right: 10px; /* Added spacing between images */
+      object-fit: cover;
+    }
+
+    .arrow-container {
+      position: absolute;
+      top: 10px;
+      right: 10px; /* Moved to the top right */
+      display: flex;
+      gap: 10px;
+    }
+
+    .arrow {
+      font-size: 24px;
+      cursor: pointer;
+      color: #4FA858;
+      background-color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .arrow:hover {
+      background-color: #eee;
+    }
+
+    .arrow.left::before {
+      content: '\2190'; /* Left arrow */
+    }
+
+    .arrow.right::before {
+      content: '\2192'; /* Right arrow */
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      .carousel img {
+        width: 100%;
+        height: auto;
+      }
+    }
+

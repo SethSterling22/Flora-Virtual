@@ -1,0 +1,367 @@
+body {
+    font-family: 'DM sans', sans-serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .especimen_hero_banner {
+  position: relative;
+  width: 100%;
+  height:300px;
+  overflow: hidden;
+  background-image: url(/elverde/assets/images/familias/familias_hero_img.png);
+  background-size: cover;
+  background-position: center;
+    
+}
+
+
+.captiontitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; 
+    text-align: center; 
+    margin: 0; 
+    font-size: 3vw;
+    font-weight: 600; /* Set font weight */
+    text-shadow: 0px 2px 2px rgba(150, 150, 150, .5);
+}
+  
+
+        /* Breakpoint for max-width: 800px */
+        @media screen and (max-width: 800px) {
+            .especimen_hero_banner {
+                width: 100%; 
+                height:150px;
+            }
+        }
+
+        /* Breakpoint for max-width: 480px */
+        @media screen and (max-width: 480px) {
+            .especimen_hero_banner {
+                width: 100%; 
+            }
+
+            .captiontitle{
+                font-size:20px;
+            }
+        }
+
+
+/* ############################ Buscador Filtro ############################ */
+
+          .button-esp {
+            display: inline-flex;
+            background-color: #dcf0dc;
+            justify-content: center;
+            align-items: center; /* Agregado para centrar verticalmente */
+            font-size: 16px;
+            color: #309a42;
+            padding: 10px;
+            margin: 20px auto auto auto;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 500px;
+            height: 25px;
+            text-align: center;
+          }
+
+          .button-esp:hover {
+            background-color: #fff0e0;
+            color:  #FCAB5B;
+            border-radius: 10px;
+          }
+
+        .selection {
+            position: relative;
+            font-family: Arial, sans-serif;
+            align-items: center;
+          }
+        
+          .searchbox {
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 80%;
+          }
+        
+          .searchbox::after {
+            display: inline-flex;
+            margin-left: 5px;
+            vertical-align: middle;
+            align-items: center;
+            justify-content: center;
+          }
+        
+          .searchbox.open {
+            background-color: #e6e6e6;
+          }
+        
+          .searchbox.open::after {
+            transform: rotate(180deg);
+
+          }
+        
+          .options {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            background-color: #e6e6e6;
+            align-items: center;
+            border-radius: 5px;
+            padding: 5px;
+            display: none;
+            box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2); /* Añadir sombra desvanecida */
+            max-height: 100px;
+            overflow: auto;
+          }
+        
+          .options.open {
+            display: block;
+            z-index: 1;
+          }
+        
+          .option {
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: height 0.3s ease;
+          }
+        
+          .option:hover {
+            background-color: #d1d1d1;
+          }
+
+          .container {
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 0 auto; /* Para centrar horizontalmente el grupo */
+            max-width: 1200px; /* Esto dependerá del tamaño de las cajas de filtro */
+            margin-top: -40px;
+            box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2); /* Añadir sombra desvanecida */
+          }
+        
+          .category {
+            width: 30%;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+          }
+        
+          .subcategory {
+            margin-top: 5px;
+            border-radius: 5px;
+          }
+        
+          @media (max-width: 768px) {
+            .category {
+              width: 45%;
+            }
+          }
+        
+          @media (max-width: 576px) {
+            .category {
+              width: 90%;
+            }
+          }
+
+
+/* Barras de búsqueda de los filtros */
+
+          .search-bar {
+            display: flex;
+            position: relative;
+            max-width: 960px;
+            height: 35px;
+            margin: 0 auto;
+          }
+          
+          .input-search {
+            width: calc(100% - 58px); 
+            flex: 1;
+          }
+
+          .clear-icon {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background-color: #acacac;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          
+          .clear-icon::before,
+          .clear-icon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 2px;
+            background-color: #ffffff;
+            transition: background-color 0.3s ease;
+          }
+          
+          .clear-icon::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
+          
+          .clear-icon::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
+          
+          .clear-icon:hover {
+            background-color: #FF0000; /* Cambia el color a rojo (#FF0000) */
+          }
+          
+          .clear-icon:hover::before,
+          .clear-icon:hover::after {
+            background-color: #ffffff;
+          }
+          
+          .input-search input {
+            font-family: 'DM Sans', sans-serif;
+            display: inline-block;
+            width: 90%;
+            height: 35px;
+            color:  #616161;
+            font-weight: 500;
+            border: 2px solid transparent;
+            background-color: #FEFCFC;
+            font-size: 1rem;
+            border-radius: 8px;
+            padding-left: 30px;
+            box-sizing: border-box;
+            outline: none;
+            border-color: #acacac;
+          }
+
+          .input:focus, input:hover {
+            outline: none;
+            border-color: #4FA858;
+            background-color: #fff;
+            box-shadow: #4FA858;
+          }
+          
+          .search-menu {
+            /* El display cambia cuando se da click en el input */
+            display: none;
+            width: 100%; 
+            color: #999999;
+            background-color: #ffffff;
+            border-radius: 4px;
+            font-size: 16px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            z-index: 10;
+          }
+          
+
+
+          .columns {
+            padding:10px;
+            max-height: 150px;
+            overflow: auto;
+          }
+          
+          .column {
+            padding-left: 20px;
+            text-align: left;
+          }
+          
+          .column p {
+            text-decoration: none;
+            font-weight: 500;
+            color: inherit; /* Hereda el color del texto de la clase "card-text" */
+            text-decoration: none; 
+          }
+          
+          .column p:hover{
+          color: #FCAB5B;
+          }
+          
+          .column h2 {
+            text-decoration: none;
+            font-weight: 700;
+            color:#4FA858;
+          }
+          
+          /* Responsive Breakpoints */
+          
+          @media screen and (max-width: 820px) {
+            .search-bar {
+                width: 100%;
+                height: 35px;
+            }
+            .search-menu {
+              width: 100%;
+          }
+           .search-btn{
+            font-size: 14px;
+            width: 40px;
+            padding-left: 5px;
+          
+           }
+           .input-search input {
+            font-size: 1rem;
+           }
+           
+           .column h2 {
+            font-size: 1.2rem;
+          }
+          }
+          
+          @media screen and (max-width: 500px) {
+            .search-bar {
+                width: 100%;
+            }
+          
+            .input-search input {
+              font-size: 0.8rem;
+             }
+          
+            .search-menu {
+              width: 100%;
+          }
+          .search-btn{
+            font-size: 14px;
+            width: 40px;
+           }
+            .columns {
+                grid-template-columns: 1fr;
+            }
+          }
+          
+          
+          
+          /* search bar and menu */
+          /* Esta función es la que cuando se da click en el "input", se despliega el menú */
+          /* .input-search:focus-within .search-menu {
+            display: block;
+          }
+
+          /* Apply green outline only when input is focused */
+          .input-search input:focus {
+            border: 1px solid #4FA858;
+          }
