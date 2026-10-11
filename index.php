@@ -1,43 +1,97 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/elverde/assets/images/homepage/Icono_Flora.png" type="image/x-icon">
-<!-- Line Awesome CDN Link -->
-<link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
-  integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/elverde/assets/stylesheets/nav_styles.css"> 
-</head>
+<!DOCTYPE html>
+<html lang="en">
 
-<body> 
-<section class="nav">
-  <a href="/elverde" class="logo">
-      <img src="/elverde/assets/images/homepage/logo-flora-virtual new-2024.png" alt="Site's logo">
-  </a>
-  <nav>
-      <div class="hamburger" onclick="toggleMenu()">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-      </div>
-      <ul class="nav-list">
-          <li><a href="index.php" class=unselected>Home</a></li>
-          <li><a href="familias.php" class=unselected>Familia</a></li>
-          <li><a href="especies.php" class=unselected>Especies</a></li>
-          <li><a href="especimen.php" class=unselected>Especímenes</a></li>
-          <li class="dropdown" onclick="toggleDropdown()">
-              <a href="#" class=unselected>Recursos ▼</a>
-              <div class="dropdown-content">
-                  <a href="claves.php">Claves</a>
-                  <a href="glosario.php">Glosario</a>
-                  <a href="literatura.php">Literatura</a>
-              </div>
-          </li>
-          <li><a href="galeria.php" class=unselected>Galería</a></li>
-          <li><a href="nosotros.php" class=unselected>Nosotros</a></li>
-      </ul>
-  </nav>
+<!-- Incluir el encabezado -->
+<?php include 'head.html'; 
+
+// Realiza conexión
+include("connection/connection.php");
+include("connection/config.php"); ?>
+<title>El Verde</title>
+
+<!-- llamar al stylesheet correspondiente -->
+<link rel="stylesheet" type="text/css" href="assets/stylesheets/homepage_styles.css">
+
+<body>
+
+    <main>
+        <!-- herobanner -->
+        <section class="hero-banner">
+            <div class='heroimage'>
+                <div class="captioncontainer">
+                    <h1 class="captiontitle">
+                        El Verde Field Station
+                    </h1>
+                    <h2 class="captiontitle">
+                        Where Tropical Rainforest Ecosystems are Available
+                    </h2>
+                    <!-- Incluir el search -->
+                    <?php include 'searchbar.php'; ?>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- cards -->
+
+<section class="card-category">
+
+<div class="homepage-cards">
+    <img src="/elverde/assets/images/homepage/Flora.jpg" style="width: 100%; height: 250px;" alt="Flore Virtual">
+    <div class="card-content">
+        <h3 class="h3-custom">Flora Virtual El Verde</h3>
+        <p class="card-description">
+            La Flora Virtual de la Estación Biológica El Verde contiene información sobre más de 600 especies de plantas vasculares que han sido registradas para el área. Para casi todas las especies se incluyen fotos en el campo e imágenes de especímenes de herbario, pero solo las especies de árboles y arbustos (más de 200) contienen descripciones completas y se incluyen en las claves interactivas.
+        </p>
+    </div>
+</div>
+
+<div class="homepage-cards">
+    <img src="/elverde/assets/images/homepage/Estacion-biologica.jpg" style="width: 100%; height: 250px;" alt="Estación Biológica El Verde">
+    <div class="card-content">
+        <h3 class="h3-custom">Estación Biológica El Verde</h3>
+        <p class="card-description">
+            La Estación Biológica El Verde se encuentra en la ladera noroeste del Bosque Nacional El Yunque, en la Sierra de Luquillo. El bosque, localmente conocido como "bosque de tabonuco" es y ha sido objeto de una amplia gama de estudios en ecología tropical. La Estación es manejada por el Instituto para Estudios de Ecosistemas Tropicales (ITES) de la Universidad de Puerto Rico.
+        </p>
+    </div>
+</div>
+
+<div class="homepage-cards">
+    <img src="/elverde/assets/images/homepage/Herbario.jpg" style="width: 100%; height: 250px;" alt="Herbario UPRRP">
+    <div class="card-content">
+        <h3 class="h3-custom">Herbario UPR Río Piedras</h3>
+        <p class="card-description">
+            El herbario de la Universidad de Puerto Rico en Río Piedras (UPRRP) alberga la colección más grande de especímenes de plantas en Puerto Rico. Con aproximadamente 54,000 ejemplares, se especializa en la flora de la isla, pero también contiene una buena representación de otras islas vecinas. Desde su creación, el herbario ha llevado a cabo diversos proyectos florísticos, sistemáticos, y de ecología y conservación.
+        </p>
+    </div>
+</div>
+
 </section>
-<script src="script.js"></script>
+
+        <!-- Logos -->
+        <section class="logos-section">
+            <img src="/elverde/assets/images/homepage/Catec_new.png" alt="Logo de catec" class="patrocinador">
+            <img src="/elverde/assets/images/homepage/Herbario.png" alt="Logo del herbario" class="patrocinador">
+            <img src="/elverde/assets/images/homepage/Uprrp.png" alt="Logo de la UPRRP" class="patrocinador">
+            <section>
+
+    </main>
+    <!-- <script src="script.js"></script> -->
+    <script>
+    // Obtén la lista de elementos <a> dentro de .nav-list
+    var links = document.querySelectorAll(".nav-list a");
+
+    // Recorre los enlaces y verifica si el contenido coincide con "Home"
+    for (var i = 0; i < links.length; i++) {
+        if (links[i].textContent === "Home") {
+        links[i].classList.add("selected"); // Agrega la clase "selected" al enlace con el contenido "Home"
+        }
+    }
+    </script>
+    
 </body>
+<footer>
+    <!-- Incluir el encabezado -->
+    <?php include 'footer.php'; ?>
+</footer>
+</html>
