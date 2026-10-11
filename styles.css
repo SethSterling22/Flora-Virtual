@@ -1,0 +1,749 @@
+
+body {
+  font-family: 'DM sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/*sticky nav */
+
+header {
+  background-color: #ffffff;
+  padding: 1%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2); /* Añadir sombra desvanecida */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  background-image: url("/elverde/assets/images/homepage/Logo_Flora.png");
+  background-size: contain; /* ajusta la imagen al tamaño del contenedor */
+  background-position: left; /* centra la imagen dentro del contenedor */
+  background-repeat: no-repeat;
+  color: #4FA858;
+  font-size: 1.5em;
+  height: 70px; /* ajusta la altura del contenedor según tus necesidades */
+  width: 300px; /* ajusta el ancho del contenedor según tus necesidades */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-list li {
+  margin-left: 30px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #2F4031;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #4FA858;
+  margin: 3px 0;
+}
+
+
+/* Hero banner style */
+.hero-banner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: auto;
+}
+
+@media(max-width:500px){
+  .heroimage{
+    height: 75vw;
+    transition: .25s all linear;
+   transform: perserve 3d;
+  }
+}
+
+
+
+h1.captiontitle {
+  font-family: avenir;
+  margin:3%;
+  font-weight: 600;
+  font-size: 7vw;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 2px 2px rgba(150, 150, 150, .5);
+  animation-name: headerenter;
+  animation-duration: 5s;
+ 
+}
+
+@keyframes headerenter {
+    from {
+      letter-spacing: 20px;
+      opacity: .0;
+    }
+    to {
+      letter-spacing: 0px;
+      opacity: 1;
+    }
+} 
+
+@-webkit-keyframes subheadenter {
+    0%  {opacity: 0;}
+  25% {opacity: 0;}
+  50% {opacity: 0;}
+  75% {opacity: .5;}
+  100%{opacity: 1;}
+}
+
+@keyframes subheadenter {
+  0%  {opacity: 0;}
+  25% {opacity: 0;}
+  50% {opacity: 0;}
+  75% {opacity: .75;}
+  100%{opacity: 1;}
+} 
+    
+
+
+@media(max-width:500px){
+h1.captiontitle {
+  font-family: avenir;
+  font-weight: 600;
+  font-size: 8.5vw;
+  color: white;
+  text-shadow: 0px 2px 2px rgba(150, 150, 150, .5);
+}  
+}
+
+@media(max-width:500px){
+h2.captiontitle {
+  margin-top: -5vw;
+  font-family: avenir;
+  font-weight: 100;
+  letter-spacing: .75vw;
+  font-size: 4.5vw;
+  color: white;
+  text-shadow: 0px 2px 2px rgba(150, 150, 150, .5);
+  }
+}
+
+@-webkit-keyframes headerenter {
+    from {
+      letter-spacing: 20px;
+      opacity: .0;
+    }
+    to {
+      letter-spacing: 0px;
+      opacity: 1;
+    }
+}
+
+@keyframes headerenter {
+    from {
+      letter-spacing: 20px;
+      opacity: .0;
+    }
+    to {
+      letter-spacing: 0px;
+      opacity: 1;
+    }
+} 
+
+@-webkit-keyframes subheadenter {
+    0%  {opacity: 0;}
+  25% {opacity: 0;}
+  50% {opacity: 0;}
+  75% {opacity: .5;}
+  100%{opacity: 1;}
+}
+
+@keyframes subheadenter {
+  0%  {opacity: 0;}
+  25% {opacity: 0;}
+  50% {opacity: 0;}
+  75% {opacity: .75;}
+  100%{opacity: 1;}
+} 
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+
+
+/* search bar */
+
+.search-bar {
+  display: flex;
+  position: relative;
+  width: 920px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.search-category {
+  position: relative;
+  padding: 0 20px;
+  background-color: #4FA858;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-category a {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 30px; /* Added 'px' unit */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.search-category a i {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 20px;
+  transition: all 0.2s;
+}
+
+.search-category:hover a i {
+  transform: rotate(180deg);
+}
+
+.category-menu {
+  width: 960px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  font-size: 14px;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.38s;
+  z-index: 11;
+}
+
+.category-menu .subject {
+  margin: 4px 0;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.category-menu .menu-item {
+  position: relative;
+  padding: 6px 0 6px 36px;
+  color: #999999;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: capitalize;
+  transition: all 0.13s;
+}
+
+.category-menu .menu-item:hover {
+  color: #2F4031;
+}
+
+.search-category:hover .category-menu {
+  top: calc(100% + 4px);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.input-search {
+  width: 100%;
+  flex: 1;
+}
+
+.input-search input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #999999;
+  background-color: #ffffff;
+  font-size: 14px;
+  border-radius: 0 4px 4px 0;
+
+
+}
+
+input[type="text"]::placeholder {
+ padding-left: 20px;
+}
+
+input[type="text"] {
+ padding-left: 20px;
+ color: #999999;
+}
+
+
+input[type="text" i] {
+    writing-mode: horizontal-tb !important;
+    padding: 0%;
+    border-width: 0px;
+}
+
+.search-btn {
+  width: 58px;
+  height: 100%;
+  color: #4FA858;
+  background-color: #ffffff;
+  font-size: 16px;
+  border-radius: 0 4px 4px 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.search-btn i {
+  font-size: 24px;
+}
+
+.search-menu {
+  display: none;
+  width: 100%;
+  padding: 20px 30px;
+  color: #999999;
+  background-color: #ffffff;
+  border-radius: 4px;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 10;
+}
+
+.search-related a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #2F4031;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 32px;
+  transition: all 0.13s;
+}
+
+.search-related a:hover {
+  color: #ffffff;
+}
+
+.input-search input:focus+.search-menu {
+  display: block;
+}
+
+
+
+/* Cards */
+category-name {
+  font-family: sans-serif;
+  width: -webkit-fill-available;
+  text-align: center;
+  font-size: 40px;
+
+}
+
+.card-category-1 {
+  min-width: 80%;
+  font-family: sans-serif;
+  margin-top: 100px;
+  /* margin-bottom: 45px; */
+  text-align: center;
+  /* min-height: 1300px; */
+
+}
+
+
+.card-category-1 div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card-category-1>div {
+  margin: 20px 5px;
+  text-align: left;
+}
+
+.basic-card {
+  width: 500px;
+  min-height: 900px;
+  position: relative;
+  border-radius: 5px; 
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.basic-card:before {
+  content: "";
+  background-size: contain;
+  background-image: url("Images_elverde/alain36224.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-left: 2.5%;
+  left: 0;
+  top: 0;
+  width: 100px; /* ajusta el ancho de la imagen según tus necesidades */
+  height: 100%; /* ajusta la altura de la imagen según tus necesidades */
+  border-radius: 5px; /* ajusta el radio de borde según tus */
+}
+.basic-card .card-content {
+  padding: 30px;
+}
+
+.basic-card .i-card-title {
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.basic-card .card-text {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+.basic-card .card-link a:after {
+  top: 30px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  width: 0;
+
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.basic-card-light {
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.basic-card-light .i-card-title {
+  color: #636363;
+}
+
+.basic-card-light .card-text {
+  color: #7b7b7b;
+}
+
+/* rounded-card */
+.card-category-2 {
+  font-family: sans-serif;
+  margin-top: 100px;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.card-category-2 div {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-category-2 > div {
+  margin: 20px 5px;
+  text-align: left;
+}
+
+.rounded-card {
+  width: 120vh;
+  min-width: 700px;
+  border-radius: 5px; 
+  position: relative;
+  border-radius: 5px; /* Agrega bordes redondeados */
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.rounded-card .card-content {
+  padding: 30px;
+  margin-left: 270px; /* Ajusta el margen izquierdo según el ancho de la imagen */
+  margin-right: 2%;
+  position: relative;
+  display: inline-block;
+  align-items: center;
+}
+
+.rounded-card .card-title {
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  margin-left: 20px; /* Añade un margen a la izquierda del título para separarlo de la imagen */
+  /* text-align: justify;  */
+  display: inline-block;
+}
+
+.rounded-card .card-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-left: 20px; /* Añade un margen a la izquierda del texto para separarlo de la imagen */
+  text-align: justify; /* Justifica el texto */
+}
+
+.card-link {
+  color: inherit; /* Hereda el color del texto de la clase "card-text" */
+  text-decoration: none; /* Elimina la subrayado */
+  /* Otros estilos personalizados que desees aplicar */
+}
+
+/* fotos de familias */
+
+
+.familia_heroimage {
+   background-image: url('/elverde/assets/images/familias/familias_hero_img.png');
+  background-size: cover;
+  margin: 20px;
+  height: 35vw;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .25s all linear;
+  transform: perserve 3d;
+}
+
+
+.rounded-card .card-image {
+  content: "";
+  background-size: contain;
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 2%;
+  top: 40px; /* Centra verticalmente la imagen */
+  width: 100%;
+  height: 100%;
+  max-width: 400px; /* Establece un tamaño máximo para la imagen */
+  max-height: 200px; /* Duplica la altura de la imagen */
+  border-radius: 5px; /* Ajusta el radio de borde según tus necesidades */
+}
+
+.rounded-card .card-image.top {
+  bottom: auto;
+}
+
+.rounded-card .card-image.bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.rounded-card .card-link {
+  color: inherit;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.rounded-card .card-link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: inherit;
+  width: 0;
+  transition: width 0.3s ease 0s;
+}
+
+.rounded-card .card-link:hover {
+  transform: scale(1.05);
+}
+
+.rounded-card .card-link:hover::after {
+  width: 100%;
+}
+
+
+.rounded-card-light {
+  border: 1px solid #eee;
+}
+
+.rounded-card-light .card-title {
+  color: #4FA858;
+}
+
+
+.rounded-card-light .card-text {
+  color: #7b7b7b;
+}
+
+.rounded-card:hover {
+  transform: scale(1.05); /* Escala el elemento al 105% cuando se pasa el mouse por encima */
+}
+
+.rounded-card {
+  background-color: #F7F9F7;
+}
+
+/* search */
+
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  justify-content: center; /* Agregado para centrar horizontalmente */
+  position: relative;
+  height: 60px;
+  margin: 0 auto; /* Para centrar horizontalmente el grupo */
+  max-width: 960px;
+  margin-top: -30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2); /* Añadir sombra desvanecida */
+}
+
+ .input {
+  width: 100%;
+  height: 80px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 4rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: .3s ease;
+  font-size: 20px;
+  appearance: none;
+ }
+ 
+ .input::placeholder {
+  color: #9e9ea7;
+ }
+ 
+ .input:focus, input:hover {
+  outline: none;
+  border-color: #4FA858;
+  background-color: #fff;
+  box-shadow: #4FA858;
+ }
+ 
+ .icon {
+  position: absolute;
+  left: 1.5rem;
+  fill: #9e9ea7;
+  width: 1.5rem;
+  height: 1.5rem;
+ }
+ 
+/* Responsive Breakpoints */
+ 
+/* TABLET */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 82px;
+    color: #ffffff;
+    font-weight: 700px;
+  
+  }
+  header {
+    padding: 10px;
+  }
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fffbfb;
+    padding: 10px; 
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav-list li {
+    margin: 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .hero-banner {
+    height: 60vh; /* Adjust the height as needed */
+  }
+ 
+}
+
+/* PHONE*/
+
+@media screen and (max-width: 576px) {
+
+  
+  
+  h1 {
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: 700px;
+  
+  }
+  .hero-banner {
+    height: 50vh; /* Adjust the height as needed */
+  }
+
+
+  .hero-content {
+    font-size: 1.2rem; /* Further adjust font size for even smaller screens */
+  }
+}
+
+
+
